@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="./public/favicon.ico" alt="" width="160" height="160">
+  <img src="./src/img/logo.png" alt="" height="160">
   <h3 align="center">Ecosaviour Ewaste Website</h3>
-
 
   <p align="center">
     This repository contains codebase of website for Ecosaviour Ewaste ✨
