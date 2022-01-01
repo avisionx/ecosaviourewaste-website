@@ -26,21 +26,7 @@ const NavBar = ({ isSmall }) => {
   const [collapsed, setCollapsed] = useState(true);
   const toggleNavbar = () => setCollapsed(!collapsed);
 
-  const [scrollPosition, setScrollPosition] = useState(window.pageYOffset > 5);
-
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position > 5);
-  };
-
   const location = useLocation();
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -49,18 +35,14 @@ const NavBar = ({ isSmall }) => {
   return (
     <>
       <Navbar
-        className={`${scrollPosition ? 'shadow' : ''}  px-lg-5 py-0`}
-        color={scrollPosition ? 'white' : isSmall ? 'white' : 'transparent'}
+        className="shadow  px-lg-5 py-0"
+        color="white"
         expand="lg"
         fixed="top"
         light
       >
         <Link to="/" className="py-3" replace>
-          <img
-            src={logo}
-            alt=""
-            height={scrollPosition ? '75px' : isSmall ? '75px' : '110px'}
-          />
+          <img src={logo} alt="" height="75px" />
         </Link>
         <Button
           color="transparent"

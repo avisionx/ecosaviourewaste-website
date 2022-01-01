@@ -41,8 +41,11 @@ const App = () => {
           }}
         ></div>
         <div
-          style={{ minHeight: '900px', zIndex: 10, paddingTop: '180px' }}
-          className="text-danger"
+          style={{
+            minHeight: '900px',
+            zIndex: 10,
+            paddingTop: isSmall ? '120px' : '180px',
+          }}
         >
           <Switch>
             <Route

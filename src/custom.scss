@@ -39,11 +39,12 @@ input:-webkit-autofill {
 
 html {
   font-family: "Lato", sans-serif;
+  color: #3f3d56;
 }
 
 body {
   font-family: "Lato", sans-serif;
-  color: #000807;
+  color: #3f3d56;
 }
 
 h1,
@@ -53,18 +54,6 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", sans-serif;
-}
-
-.head {
-  font-family: "Montserrat", sans-serif;
-}
-
-.gradient-bg {
-  background: rgb(215, 228, 220);
-  background: -moz-linear-gradient(180deg, rgba(215, 228, 220, 0.8) 0%, rgba(255, 255, 250, 0) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(215, 228, 220, 0.8) 0%, rgba(255, 255, 250, 0) 100%);
-  background: linear-gradient(180deg, rgba(215, 228, 220, 0.8) 0%, rgba(255, 255, 250, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7e4dc",endColorstr="#fffffa",GradientType=1);
 }
 
 textarea:focus,
@@ -80,4 +69,27 @@ input[type="number"]:focus,
 [type="tel"].form-control:focus,
 [contenteditable].form-control:focus {
   box-shadow: none;
+}
+
+.widen {
+  letter-spacing: 10px;
+}
+
+.head {
+  font-family: "Montserrat", sans-serif;
+}
+
+.gradient-bg {
+  background: rgb(215, 228, 220);
+  background: -moz-linear-gradient(180deg, rgba(215, 228, 220, 0.8) 0%, rgba(255, 255, 250, 0) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(215, 228, 220, 0.8) 0%, rgba(255, 255, 250, 0) 100%);
+  background: linear-gradient(180deg, rgba(215, 228, 220, 0.8) 0%, rgba(255, 255, 250, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7e4dc",endColorstr="#fffffa",GradientType=1);
+}
+.bg-gradient-primary {
+  background: rgb(215, 228, 220);
+  background: -moz-linear-gradient(90deg, rgba(63, 61, 86, 1) 0%, rgba(55, 120, 79, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(63, 61, 86, 1) 0%, rgba(55, 120, 79, 1) 100%);
+  background: linear-gradient(90deg, rgba(63, 61, 86, 1) 0%, rgba(55, 120, 79, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc107", endColorstr="#e3010f", GradientType=1);
 }
