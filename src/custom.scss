@@ -93,3 +93,37 @@ input[type="number"]:focus,
   background: linear-gradient(90deg, rgba(63, 61, 86, 1) 0%, rgba(55, 120, 79, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc107", endColorstr="#e3010f", GradientType=1);
 }
+
+#main_marquee_div {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#marquee_div1 {
+  display: inline-block;
+  animation: marquee 40s linear infinite;
+  animation-delay: -20s;
+}
+
+#marquee_div2 {
+  display: inline-block;
+  animation: marquee2 40s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}

@@ -22,7 +22,7 @@ const Footer = ({ isSmall }) => {
         <Row className="text-light pt-0 pt-lg-5 pb-4 d-flex justify-content-center">
           <Col sm="12" lg="3">
             <Link to="/" className="py-3" replace>
-              <div className="row no-gutter d-flex align-items-center">
+              <div className="row no-gutter d-flex align-items-center mt-4 mt-lg-0">
                 <Col xs="5">
                   <img width="100%" src={logo} alt="" className="img-fluid" />
                 </Col>

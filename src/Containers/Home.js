@@ -3,10 +3,12 @@ import Icon from '@mdi/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
+import ImageSlider from '../Components/ImageSlider';
 import plant from '../img/plant.svg';
+
 const Home = ({ isSmall }) => {
   return (
-    <>
+    <div className="mb-5">
       <div style={{ position: 'relative' }}>
         <img
           alt=""
@@ -44,7 +46,8 @@ const Home = ({ isSmall }) => {
           </Link>
         </Container>
       </div>
-    </>
+      <ImageSlider />
+    </div>
   );
 };
 export default Home;
