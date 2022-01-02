@@ -101,13 +101,13 @@ input[type="number"]:focus,
 
 #marquee_div1 {
   display: inline-block;
-  animation: marquee 40s linear infinite;
-  animation-delay: -20s;
+  animation: marquee 60s linear infinite;
+  animation-delay: -30s;
 }
 
 #marquee_div2 {
   display: inline-block;
-  animation: marquee2 40s linear infinite;
+  animation: marquee2 60s linear infinite;
 }
 
 @keyframes marquee {
@@ -126,4 +126,24 @@ input[type="number"]:focus,
   to {
     transform: translateX(-200%);
   }
+}
+
+.stat-rotate {
+  animation: statSpin 5s cubic-bezier(0.22, 0.56, 0.57, 0.56) infinite;
+}
+
+@keyframes statSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-bg {
+  background-color: #fffffa;
+  background-image: url("../src/img/bg.svg");
+  background-attachment: fixed;
+  background-size: cover;
 }

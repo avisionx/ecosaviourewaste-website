@@ -110,22 +110,22 @@ const Footer = ({ isSmall }) => {
               Social Links
             </h5>
             <div className="no-list mt-2">
-              <a href="/" className="text-light mr-2" replace>
+              <a href="/" className="text-light mr-2">
                 <Icon path={mdiFacebook} size={1} />
               </a>
-              <a href="/" className="text-light mr-1" replace>
+              <a href="/" className="text-light mr-1">
                 <Icon path={mdiLinkedin} size={1} />
               </a>
-              <a href="/" className="text-light mr-1" replace>
+              <a href="/" className="text-light mr-1">
                 <Icon path={mdiTwitter} size={1} />
               </a>
-              <a href="/" className="text-light mr-1" replace>
+              <a href="/" className="text-light mr-1">
                 <Icon path={mdiInstagram} size={1} />
               </a>
-              <a href="/" className="text-light mr-1" replace>
+              <a href="/" className="text-light mr-1">
                 <Icon path={mdiWhatsapp} size={1} />
               </a>
-              <a href="/" className="text-light mr-1" replace>
+              <a href="/" className="text-light mr-1">
                 <Icon path={mdiTelegram} size={1} />
               </a>
             </div>

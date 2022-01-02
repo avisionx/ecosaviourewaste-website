@@ -59,7 +59,10 @@ const NavBar = ({ isSmall }) => {
           <Nav className="ml-auto my-2 mb-4 my-lg-0" navbar>
             {links.map(({ title, to }) => {
               return (
-                <NavItem className="d-flex align-items-center p-1 mr-5 h4 my-2 my-lg-0 mb-0 head font-weight-bold">
+                <NavItem
+                  key={title}
+                  className="d-flex align-items-center p-1 mr-5 h4 my-2 my-lg-0 mb-0 head font-weight-bold"
+                >
                   <CustomNavLink to={to} className="text-primary" replace>
                     {title}
                   </CustomNavLink>
