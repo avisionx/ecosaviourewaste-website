@@ -127,6 +127,7 @@ const Home = ({ isSmall }) => {
   const [aboutBoxVis, setAboutBoxVix] = useState(false);
   const [serviceBoxVis, setServiceBoxVis] = useState(false);
   const [processBoxVis, setProcessBoxVis] = useState(false);
+  const [clientBoxVis, setClientBoxVis] = useState(false);
   const [activeIndexProcess, setActiveIndexProcess] = useState(0);
   const [activeIndexStarted, setActiveIndexStarted] = useState(isSmall);
 
@@ -174,6 +175,17 @@ const Home = ({ isSmall }) => {
       document.querySelector('#processhead').classList.remove('hidden');
     }
   }, [processBoxVis]);
+
+  useEffect(() => {
+    if (clientBoxVis) {
+      animateCSS('#clienthead', 'fadeInLeft').then(() => {
+        animateCSS('#clients', 'fadeInDown');
+        document.querySelector('#clients').classList.remove('hidden');
+      });
+
+      document.querySelector('#clienthead').classList.remove('hidden');
+    }
+  }, [clientBoxVis]);
 
   return (
     <>
@@ -572,8 +584,8 @@ const Home = ({ isSmall }) => {
       <div>
         <VisibilitySensor
           onChange={(isVisible) => {
-            if (isVisible && !processBoxVis) {
-              setProcessBoxVis(true);
+            if (isVisible && !clientBoxVis) {
+              setClientBoxVis(true);
             }
           }}
         >
@@ -582,8 +594,11 @@ const Home = ({ isSmall }) => {
             className="px-lg-5"
             style={{ overflow: 'hidden', position: 'relative' }}
           >
-            <div className="mb-5">
-              <div>
+            <div>
+              <div
+                id="clienthead"
+                className={`${isSmall ? '' : 'hidden'}  animate__faster`}
+              >
                 <h1 className="font-weight-bold display-4 text-center">
                   Our Clients
                 </h1>
@@ -604,7 +619,27 @@ const Home = ({ isSmall }) => {
                   />
                 </div>
               </div>
-              <div className="mt-5 py-0 py-lg-5"></div>
+              <Row
+                id="clients"
+                className={`py-0 py-lg-0 ${
+                  isSmall ? '' : 'hidden'
+                }  animate__faster`}
+              >
+                <Col xs={{ offset: 1, size: 10 }}>
+                  <Row>
+                    {[...Array(17)].map((x, i) => (
+                      <Col xs="4" md="2" key={i}>
+                        <img
+                          alt=""
+                          src={process.env.PUBLIC_URL + `/img/${i}.png`}
+                          width="100%"
+                          className="img-fluid"
+                        />
+                      </Col>
+                    ))}
+                  </Row>
+                </Col>
+              </Row>
             </div>
             <img
               alt=""
