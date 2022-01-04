@@ -584,7 +584,7 @@ const Home = ({ isSmall }) => {
       <div>
         <VisibilitySensor
           onChange={(isVisible) => {
-            if (isVisible && !clientBoxVis) {
+            if (isVisible && !clientBoxVis && !isSmall) {
               setClientBoxVis(true);
             }
           }}
