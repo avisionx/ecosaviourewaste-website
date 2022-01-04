@@ -1,14 +1,22 @@
 import {
   mdiArrowRight,
   mdiCircle,
+  mdiCircleOutline,
+  mdiClockOutline,
   mdiDatabaseLockOutline,
+  mdiDeleteVariant,
+  mdiDolly,
+  mdiHammer,
   mdiHeadLightbulbOutline,
   mdiHomeAssistant,
   mdiLaptop,
   mdiNotebookEditOutline,
+  mdiNuke,
+  mdiPackageVariant,
   mdiRecycle,
   mdiRecycleVariant,
   mdiTabletCellphone,
+  mdiTruckFastOutline,
 } from '@mdi/js';
 import Icon, { Stack } from '@mdi/react';
 import React, { useEffect, useState } from 'react';
@@ -16,6 +24,8 @@ import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 import ImageSlider from '../Components/ImageSlider';
 import plant from '../img/plant.svg';
+import blob1 from '../img/blob1.svg';
+import blob2 from '../img/blob2.svg';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { animateCSS } from '../helpers';
@@ -73,6 +83,37 @@ const services = [
   },
 ];
 
+const processData = [
+  {
+    icon: mdiClockOutline,
+    title: 'Schedule Pickup',
+  },
+  {
+    icon: mdiHammer,
+    title: 'Onsite Data Destruction',
+  },
+  {
+    icon: mdiPackageVariant,
+    title: 'Material Collection',
+  },
+  {
+    icon: mdiTruckFastOutline,
+    title: 'Secured Transport',
+  },
+  {
+    icon: mdiDolly,
+    title: 'Receipt Of Material',
+  },
+  {
+    icon: mdiDeleteVariant,
+    title: 'Dismantling',
+  },
+  {
+    icon: mdiNuke,
+    title: 'Shredding & Segregation',
+  },
+];
+
 const Home = ({ isSmall }) => {
   useEffect(() => {
     animateCSS('#homeText', 'fadeInUp');
@@ -84,6 +125,9 @@ const Home = ({ isSmall }) => {
 
   const [aboutBoxVis, setAboutBoxVix] = useState(false);
   const [serviceBoxVis, setServiceBoxVis] = useState(false);
+  const [processBoxVis, setProcessBoxVis] = useState(false);
+  const [activeIndexProcess, setActiveIndexProcess] = useState(0);
+  const [activeIndexStarted, setActiveIndexStarted] = useState(isSmall);
 
   useEffect(() => {
     if (aboutBoxVis) {
@@ -103,6 +147,32 @@ const Home = ({ isSmall }) => {
       document.querySelector('#servicehead').classList.remove('hidden');
     }
   }, [serviceBoxVis]);
+
+  useEffect(() => {
+    if (activeIndexStarted) {
+      const interval = setInterval(() => {
+        if (activeIndexProcess + 1 < 7)
+          setActiveIndexProcess(activeIndexProcess + 1);
+        else setActiveIndexProcess(0);
+      }, 1500);
+      return () => clearInterval(interval);
+    }
+  }, [activeIndexProcess, activeIndexStarted]);
+
+  useEffect(() => {
+    if (processBoxVis) {
+      animateCSS('#processhead', 'fadeInLeft').then(() => {
+        animateCSS('#swiperProcess', 'fadeInUp').then(() => {
+          setActiveIndexProcess(0);
+          setActiveIndexStarted(true);
+        });
+        document.querySelector('#swiperProcess').classList.remove('hidden');
+      });
+      animateCSS('#processsidetext', 'fadeIn');
+      document.querySelector('#processsidetext').classList.remove('hidden');
+      document.querySelector('#processhead').classList.remove('hidden');
+    }
+  }, [processBoxVis]);
 
   return (
     <>
@@ -329,6 +399,172 @@ const Home = ({ isSmall }) => {
                 ))}
               </Row>
             </div>
+          </Container>
+        </VisibilitySensor>
+      </div>
+      <div style={{ position: 'relative' }}>
+        <img
+          alt=""
+          src={blob1}
+          width="250px"
+          className="d-none d-lg-block"
+          style={{
+            position: 'absolute',
+            right: '10px',
+            top: '-70px',
+            opacity: 0.1,
+          }}
+        />
+      </div>
+      <div>
+        <VisibilitySensor
+          onChange={(isVisible) => {
+            if (isVisible && !processBoxVis) {
+              setProcessBoxVis(true);
+            }
+          }}
+        >
+          <Container
+            fluid
+            className="px-lg-5"
+            style={{ overflow: 'hidden', position: 'relative' }}
+          >
+            <div
+              id="processsidetext"
+              className={`widen small head text-uppercase d-flex align-items-center justify-content-center ${
+                isSmall ? 'd-none' : 'hidden'
+              }  animate__faster`}
+              style={{
+                position: 'absolute',
+                transform: 'rotate(90deg) translate(0, -50%)',
+                right: '-8rem',
+                top: '50%',
+              }}
+            >
+              <hr
+                style={{
+                  margin: '0 10px',
+                  width: isSmall ? '50%' : '5rem',
+                  float: 'left',
+                  background: '#36794F',
+                }}
+              />
+              Trust The Process
+              <hr
+                style={{
+                  margin: '0 10px',
+                  width: isSmall ? '50%' : '5rem',
+                  float: 'right',
+                  background: '#36794F',
+                }}
+              />
+            </div>
+            <div className="py-4 py-lg-5 mt-4 mb-5">
+              <div
+                id="processhead"
+                className={`${isSmall ? '' : 'hidden'}  animate__faster`}
+              >
+                <h1 className="font-weight-bold display-4 text-left">
+                  Process
+                </h1>
+                <div>
+                  <hr
+                    style={{
+                      margin: '0',
+                      width: isSmall ? '50%' : '5rem',
+                      float: 'left',
+                      background: '#36794F',
+                    }}
+                  />
+                  <hr
+                    style={{
+                      margin: '0',
+                      width: isSmall ? '50%' : '5rem',
+                      float: 'left',
+                      background: '#FCBDBD',
+                    }}
+                  />
+                </div>
+                <p className="text-left lead mt-4 pr-0 pr-lg-5">
+                  On scheduling your e-waste pickup through our call centre, we
+                  will ensure a timely pick up from your site to our r2
+                  certified recycling plant to ensure a complete end to life
+                  solution of your e-waste disposal. The reverse logistics is
+                  managed by our own fleet of vehicles and channel partners from
+                  nation-wide locations.
+                </p>
+              </div>
+              <div
+                className={`mt-5 py-0 py-lg-5 ${isSmall ? '' : 'hidden'}`}
+                id="swiperProcess"
+              >
+                <div className="swiper-container">
+                  <div className="swiper-wrapper timeline">
+                    {processData.map(({ icon, title }, index) => (
+                      <div
+                        key={index}
+                        className={`swiper-slide ${
+                          index === activeIndexProcess ? 'active' : ''
+                        }`}
+                      >
+                        <div className="timestamp text-primary ">
+                          <Stack
+                            size={3}
+                            className={`${
+                              index === activeIndexProcess
+                                ? 'animate__animated animate__pulse animate__pulse animate__fast'
+                                : ''
+                            }`}
+                          >
+                            <Icon
+                              size={3}
+                              path={
+                                index === activeIndexProcess
+                                  ? mdiCircle
+                                  : mdiCircleOutline
+                              }
+                            />
+                            <Icon
+                              size={1.6}
+                              path={icon}
+                              color={
+                                index === activeIndexProcess
+                                  ? 'white'
+                                  : '#36794F'
+                              }
+                            />
+                          </Stack>
+                          <p className="small head font-weight-bold text-dark mb-1">
+                            {title}
+                          </p>
+                        </div>
+                        <div
+                          className={`status  ${
+                            index + 1 === processData.length
+                              ? 'mb-0'
+                              : 'mb-4 mb-lg-0'
+                          }`}
+                        >
+                          <span>Step {index + 1}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              alt=""
+              src={blob2}
+              width="200px"
+              className="d-none d-lg-block"
+              style={{
+                position: 'absolute',
+                left: '-50px',
+                bottom: '30px',
+                opacity: 0.1,
+              }}
+            />
           </Container>
         </VisibilitySensor>
       </div>
