@@ -43,7 +43,7 @@ const App = () => {
           style={{
             minHeight: '900px',
             zIndex: 10,
-            paddingTop: isSmall ? '120px' : '160px',
+            paddingTop: '110px',
           }}
         >
           <Switch>
