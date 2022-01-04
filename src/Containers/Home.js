@@ -26,6 +26,7 @@ import ImageSlider from '../Components/ImageSlider';
 import plant from '../img/plant.svg';
 import blob1 from '../img/blob1.svg';
 import blob2 from '../img/blob2.svg';
+import blob3 from '../img/blob3.svg';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { animateCSS } from '../helpers';
@@ -459,7 +460,7 @@ const Home = ({ isSmall }) => {
                 }}
               />
             </div>
-            <div className="py-4 py-lg-5 mt-4 mb-5">
+            <div className="pt-4 pt-lg-5 mt-4 mb-4">
               <div
                 id="processhead"
                 className={`${isSmall ? '' : 'hidden'}  animate__faster`}
@@ -562,6 +563,58 @@ const Home = ({ isSmall }) => {
                 position: 'absolute',
                 left: '-50px',
                 bottom: '30px',
+                opacity: 0.1,
+              }}
+            />
+          </Container>
+        </VisibilitySensor>
+      </div>
+      <div>
+        <VisibilitySensor
+          onChange={(isVisible) => {
+            if (isVisible && !processBoxVis) {
+              setProcessBoxVis(true);
+            }
+          }}
+        >
+          <Container
+            fluid
+            className="px-lg-5"
+            style={{ overflow: 'hidden', position: 'relative' }}
+          >
+            <div className="mb-5">
+              <div>
+                <h1 className="font-weight-bold display-4 text-center">
+                  Our Clients
+                </h1>
+                <div className="d-flex align-items-center justify-content-center">
+                  <hr
+                    style={{
+                      margin: '0',
+                      width: isSmall ? '50%' : '5rem',
+                      background: '#36794F',
+                    }}
+                  />
+                  <hr
+                    style={{
+                      margin: '0',
+                      width: isSmall ? '50%' : '5rem',
+                      background: '#FCBDBD',
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="mt-5 py-0 py-lg-5"></div>
+            </div>
+            <img
+              alt=""
+              src={blob3}
+              width="220px"
+              className="d-none d-lg-block"
+              style={{
+                position: 'absolute',
+                right: '150px',
+                top: '-20px',
                 opacity: 0.1,
               }}
             />

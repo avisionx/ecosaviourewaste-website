@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../img/logo.png';
+import wave from '../img/wave.svg';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, ListGroup } from 'reactstrap';
 import {
@@ -18,8 +19,9 @@ import Icon from '@mdi/react';
 const Footer = ({ isSmall }) => {
   return (
     <>
+      <img src={wave} alt="" width="100%" />
       <Container fluid className="small bg-primary text-light">
-        <Row className="text-light pt-0 pt-lg-5 pb-4 d-flex justify-content-center">
+        <Row className="text-light pt-2 pb-4 d-flex justify-content-center">
           <Col sm="12" lg="3">
             <Link to="/" className="py-3" replace>
               <div className="row no-gutter d-flex align-items-center mt-4 mt-lg-0">
