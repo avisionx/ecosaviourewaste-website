@@ -19,7 +19,12 @@ import Icon from '@mdi/react';
 const Footer = ({ isSmall }) => {
   return (
     <>
-      <img src={wave} alt="" width="100%" />
+      <img
+        src={wave}
+        alt=""
+        width="100%"
+        style={{ transform: 'translateY(3px)' }}
+      />
       <Container fluid className="small bg-primary text-light">
         <Row className="text-light pt-2 pb-4 d-flex justify-content-center">
           <Col sm="12" lg="3">
