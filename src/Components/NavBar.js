@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { mdiMenu, mdiClose } from '@mdi/js';
 import { useLocation } from 'react-router-dom';
 import Icon from '@mdi/react';
+import { animateCSS } from '../helpers';
 
 export const links = [
   {
@@ -32,9 +33,14 @@ const NavBar = ({ isSmall }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location]);
 
+  useEffect(() => {
+    animateCSS('#navbar', 'fadeInDown');
+  }, []);
+
   return (
     <>
       <Navbar
+        id="navbar"
         className="shadow  px-lg-5 py-0"
         color="white"
         expand="lg"

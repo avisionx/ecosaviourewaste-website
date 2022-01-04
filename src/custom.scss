@@ -94,7 +94,7 @@ input[type="number"]:focus,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc107", endColorstr="#e3010f", GradientType=1);
 }
 
-#main_marquee_div {
+.main_marquee_div {
   overflow: hidden;
   white-space: nowrap;
 }
@@ -146,4 +146,8 @@ input[type="number"]:focus,
   background-image: url("../src/img/bg.svg");
   background-attachment: fixed;
   background-size: cover;
+}
+
+.hidden {
+  opacity: 0;
 }

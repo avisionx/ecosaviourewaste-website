@@ -21,9 +21,9 @@ import img_19 from '../img/slider/19.jpg';
 import img_20 from '../img/slider/20.jpg';
 import img_21 from '../img/slider/21.jpg';
 
-const ImageSlider = () => {
+const ImageSlider = ({ id, className }) => {
   return (
-    <div id="main_marquee_div">
+    <div id={id} className={`${className} main_marquee_div`}>
       <div className="mt-5 mt-lg-2 py-5" id="marquee_div1">
         <div className="d-flex w-100 m-0">
           <img
