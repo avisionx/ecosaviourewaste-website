@@ -6,6 +6,7 @@ import About from './Containers/About';
 import Contact from './Containers/Contact';
 import Services from './Containers/Services';
 import Process from './Containers/Process';
+import Error404 from './Containers/Error404';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
 
@@ -27,6 +28,11 @@ const App = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    if (window.location.href.split('404_REDIRECT').length > 1)
+      history.push(window.location.href.split('404_REDIRECT')[1]);
+  }, []);
+
   return (
     <DefaultRouter history={history}>
       <NavBar isSmall={isSmall} />
@@ -37,6 +43,8 @@ const App = () => {
             height: '600px',
             position: 'absolute',
             width: '100vw',
+            zIndex: 0,
+            pointerEvents: 'none',
           }}
         ></div>
         <div
@@ -71,6 +79,10 @@ const App = () => {
               exact
               path="/contact"
               render={(props) => <Contact {...props} isSmall={isSmall} />}
+            />
+            <Route
+              path="/"
+              render={(props) => <Error404 {...props} isSmall={isSmall} />}
             />
           </Switch>
         </div>
