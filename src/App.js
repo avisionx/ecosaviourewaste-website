@@ -29,8 +29,8 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (window.location.href.split('404_REDIRECT').length > 1)
-      history.push(window.location.href.split('404_REDIRECT')[1]);
+    if (window.location.href.split('?404_REDIRECT').length > 1)
+      history.push(window.location.href.split('?404_REDIRECT')[1]);
   }, []);
 
   return (
