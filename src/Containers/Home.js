@@ -19,7 +19,7 @@ import {
   mdiTruckFastOutline,
 } from '@mdi/js';
 import Icon, { Stack } from '@mdi/react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 import ImageSlider from '../Components/ImageSlider';
@@ -131,6 +131,15 @@ const Home = ({ isSmall }) => {
   const [activeIndexProcess, setActiveIndexProcess] = useState(0);
   const [activeIndexStarted, setActiveIndexStarted] = useState(isSmall);
 
+  const aboutRef = useRef(null);
+  const goToAbout = () => {
+    aboutRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+    setAboutBoxVix(true);
+  };
+
   useEffect(() => {
     if (aboutBoxVis) {
       animateCSS('#aboutbox', 'fadeInLeft');
@@ -228,7 +237,14 @@ const Home = ({ isSmall }) => {
               Our simple process of E-Waste disposal can be your next step
               closer to sustainable future.
             </h5>
-            <Link to="#">
+            <Link
+              className="d-inline-block"
+              to="#"
+              onClick={(event) => {
+                event.preventDefault();
+                goToAbout();
+              }}
+            >
               <button
                 className="d-flex align-items-center px-lg-5 py-3 small bg-gradient-primary border-0 rounded text-uppercase font-weight-light btn btn-dark btn-lg"
                 style={{ fontSize: '15px' }}
@@ -244,6 +260,8 @@ const Home = ({ isSmall }) => {
           className="mt-4 mt-lg-5 animate__animated hidden animate__slow"
         />
         <VisibilitySensor
+          partialVisibility
+          delayedCall
           onChange={(isVisible) => {
             if (isVisible && !aboutBoxVis) {
               setAboutBoxVix(true);
@@ -251,7 +269,7 @@ const Home = ({ isSmall }) => {
           }}
         >
           <Container fluid className="py-4 py-lg-5 px-lg-5">
-            <Row>
+            <Row style={{ overflowX: 'hidden' }}>
               <Col
                 lg="5"
                 id="aboutbox"
@@ -280,7 +298,7 @@ const Home = ({ isSmall }) => {
                     />
                   </div>
                 </div>
-                <p className="text-left lead">
+                <p className="text-left lead" ref={aboutRef}>
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old. Richard McClintock,
@@ -297,6 +315,15 @@ const Home = ({ isSmall }) => {
                   first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
                   comes from a line in section 1.10.32.
                 </p>
+                <Link className="mt-5 d-inline-block" to="about">
+                  <button
+                    className="d-flex align-items-center px-lg-5 py-3 bg-gradient-primary border-0 text-uppercase font-weight-light btn btn-dark btn-lg"
+                    style={{ fontSize: '15px' }}
+                  >
+                    Keep Reading{' '}
+                    <Icon path={mdiArrowRight} className="ml-2" size={1} />
+                  </button>
+                </Link>
               </Col>
               <Col
                 lg={{
@@ -326,7 +353,11 @@ const Home = ({ isSmall }) => {
                           redraw={true}
                         >
                           {({ countUpRef, start }) => (
-                            <VisibilitySensor onChange={start} delayedCall>
+                            <VisibilitySensor
+                              onChange={start}
+                              delayedCall
+                              partialVisibility
+                            >
                               <span
                                 className="h1 font-weight-bold mb-0 d-block"
                                 style={{ color: color }}
@@ -356,6 +387,7 @@ const Home = ({ isSmall }) => {
       </div>
       <div className="services-bg">
         <VisibilitySensor
+          partialVisibility
           onChange={(isVisible) => {
             if (isVisible && !serviceBoxVis) {
               setServiceBoxVis(true);
@@ -397,7 +429,7 @@ const Home = ({ isSmall }) => {
                 {services.map(({ icon, title, text }) => (
                   <div key={title} className="col-12 col-lg-3 text-center mt-5">
                     <div
-                      className="rounded-lg py-5 h-100"
+                      className="rounded-lg shadow py-5 h-100"
                       style={{ background: 'rgba(63, 61, 86, 0.2)' }}
                     >
                       <div className="px-4 text-dark">
@@ -431,6 +463,7 @@ const Home = ({ isSmall }) => {
       </div>
       <div>
         <VisibilitySensor
+          partialVisibility
           onChange={(isVisible) => {
             if (isVisible && !processBoxVis) {
               setProcessBoxVis(true);
@@ -583,6 +616,7 @@ const Home = ({ isSmall }) => {
       </div>
       <div>
         <VisibilitySensor
+          partialVisibility
           onChange={(isVisible) => {
             if (isVisible && !clientBoxVis && !isSmall) {
               setClientBoxVis(true);
