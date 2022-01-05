@@ -8,3 +8,4 @@ Allow: /contact
 Allow: /404
 Allow: /favicon.ico
 Allow: /img/*.png
+Disallow:
