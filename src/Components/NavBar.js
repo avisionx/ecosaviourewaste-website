@@ -31,6 +31,7 @@ const NavBar = ({ isSmall }) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCollapsed(true);
   }, [location]);
 
   useEffect(() => {

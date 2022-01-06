@@ -270,11 +270,7 @@ const Home = ({ isSmall }) => {
         >
           <Container fluid className="py-4 py-lg-5 px-lg-5">
             <Row style={{ overflowX: 'hidden' }}>
-              <Col
-                lg="5"
-                id="aboutbox"
-                className={`${isSmall ? '' : 'hidden'}  animate__faster`}
-              >
+              <Col lg="5" id="aboutbox" className="hidden  animate__faster">
                 <div className="mb-4">
                   <h1 className="font-weight-bold display-4 text-center text-lg-left">
                     About Us
@@ -331,9 +327,7 @@ const Home = ({ isSmall }) => {
                   offset: 1,
                 }}
                 id="statbox"
-                className={`mt-5 mt-lg-0 ${
-                  isSmall ? '' : 'hidden'
-                }  animate__faster`}
+                className={`mt-5 mt-lg-0 hidden animate__faster`}
                 style={{ overflow: 'hidden' }}
               >
                 <Row>
@@ -396,10 +390,7 @@ const Home = ({ isSmall }) => {
         >
           <Container fluid className="px-lg-5" style={{ overflow: 'hidden' }}>
             <div className="py-4 py-lg-5 mt-4 mb-5">
-              <div
-                id="servicehead"
-                className={`${isSmall ? '' : 'hidden'}  animate__faster`}
-              >
+              <div id="servicehead" className={` hidden animate__faster`}>
                 <h1 className="font-weight-bold display-4 text-center">
                   Our Services
                 </h1>
@@ -422,9 +413,7 @@ const Home = ({ isSmall }) => {
               </div>
               <Row
                 id="servicedata"
-                className={`d-flex justify-content-center px-0 px-lg-5 ${
-                  isSmall ? '' : 'hidden'
-                }  animate__faster`}
+                className={`d-flex justify-content-center px-0 px-lg-5 hidden  animate__faster`}
               >
                 {services.map(({ icon, title, text }) => (
                   <div key={title} className="col-12 col-lg-3 text-center mt-5">
@@ -478,8 +467,8 @@ const Home = ({ isSmall }) => {
             <div
               id="processsidetext"
               className={`widen small head text-uppercase d-flex align-items-center justify-content-center ${
-                isSmall ? 'd-none' : 'hidden'
-              }  animate__faster`}
+                isSmall ? 'd-none' : ''
+              } hidden  animate__faster`}
               style={{
                 position: 'absolute',
                 transform: 'rotate(90deg) translate(0, -50%)',
@@ -506,10 +495,7 @@ const Home = ({ isSmall }) => {
               />
             </div>
             <div className="pt-4 pt-lg-5 mt-4 mb-4">
-              <div
-                id="processhead"
-                className={`${isSmall ? '' : 'hidden'}  animate__faster`}
-              >
+              <div id="processhead" className={` hidden animate__faster`}>
                 <h1 className="font-weight-bold display-4 text-left">
                   Process
                 </h1>
@@ -540,10 +526,7 @@ const Home = ({ isSmall }) => {
                   nation-wide locations.
                 </p>
               </div>
-              <div
-                className={`mt-5 py-0 py-lg-5 ${isSmall ? '' : 'hidden'}`}
-                id="swiperProcess"
-              >
+              <div className="mt-5 py-0 py-lg-5 hidden" id="swiperProcess">
                 <div className="swiper-container">
                   <div className="swiper-wrapper timeline">
                     {processData.map(({ icon, title }, index) => (
@@ -617,8 +600,9 @@ const Home = ({ isSmall }) => {
       <div>
         <VisibilitySensor
           partialVisibility
+          delayedCall
           onChange={(isVisible) => {
-            if (isVisible && !clientBoxVis && !isSmall) {
+            if (isVisible && !clientBoxVis) {
               setClientBoxVis(true);
             }
           }}
@@ -626,13 +610,10 @@ const Home = ({ isSmall }) => {
           <Container
             fluid
             className="px-lg-5"
-            style={{ overflow: 'hidden', position: 'relative' }}
+            style={{ overflowX: 'hidden', position: 'relative' }}
           >
             <div>
-              <div
-                id="clienthead"
-                className={`${isSmall ? '' : 'hidden'}  animate__faster`}
-              >
+              <div id="clienthead" className={`hidden  animate__faster`}>
                 <h1 className="font-weight-bold display-4 text-center">
                   Our Clients
                 </h1>
@@ -655,9 +636,7 @@ const Home = ({ isSmall }) => {
               </div>
               <Row
                 id="clients"
-                className={`py-0 py-lg-0 ${
-                  isSmall ? '' : 'hidden'
-                }  animate__faster`}
+                className={`py-0 py-lg-0 hidden animate__faster`}
               >
                 <Col xs={{ offset: 1, size: 10 }}>
                   <Row>
