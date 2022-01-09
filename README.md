@@ -3,7 +3,7 @@
   <h3 align="center">Ecosaviour Ewaste Website</h3>
 
   <p align="center">
-    This repository contains codebase of website for Ecosaviour Ewaste ✨
+    This repository contains the codebase of website for Ecosaviour Ewaste ✨
     </br>
     <a href="https://www.ecosaviourewaste.com/">View Live</a>
   </p>
