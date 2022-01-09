@@ -30,6 +30,7 @@ import blob3 from '../img/blob3.svg';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { animateCSS } from '../helpers';
+import { useHistory } from 'react-router-dom';
 
 const stats = [
   {
@@ -84,7 +85,7 @@ const services = [
   },
 ];
 
-const processData = [
+export const processData = [
   {
     icon: mdiClockOutline,
     title: 'Schedule Pickup',
@@ -130,7 +131,7 @@ const Home = ({ isSmall }) => {
   const [clientBoxVis, setClientBoxVis] = useState(false);
   const [activeIndexProcess, setActiveIndexProcess] = useState(0);
   const [activeIndexStarted, setActiveIndexStarted] = useState(isSmall);
-
+  const history = useHistory();
   const aboutRef = useRef(null);
   const goToAbout = () => {
     aboutRef.current.scrollIntoView({
@@ -177,7 +178,9 @@ const Home = ({ isSmall }) => {
           setActiveIndexProcess(0);
           setActiveIndexStarted(true);
         });
+        animateCSS('#knowMoreProcess', 'fadeIn');
         document.querySelector('#swiperProcess').classList.remove('hidden');
+        document.querySelector('#knowMoreProcess').classList.remove('hidden');
       });
       animateCSS('#processsidetext', 'fadeIn');
       document.querySelector('#processsidetext').classList.remove('hidden');
@@ -415,11 +418,15 @@ const Home = ({ isSmall }) => {
                 id="servicedata"
                 className={`d-flex justify-content-center px-0 px-lg-5 hidden  animate__faster`}
               >
-                {services.map(({ icon, title, text }) => (
+                {services.map(({ icon, title, text }, index) => (
                   <div key={title} className="col-12 col-lg-3 text-center mt-5">
                     <div
+                      onClick={() => history.push(`/services#${index + 1}`)}
                       className="rounded-lg shadow py-5 h-100"
-                      style={{ background: 'rgba(63, 61, 86, 0.2)' }}
+                      style={{
+                        background: 'rgba(63, 61, 86, 0.2)',
+                        cursor: 'pointer',
+                      }}
                     >
                       <div className="px-4 text-dark">
                         <Icon path={icon} size={4} color="#36794F" />
@@ -580,6 +587,20 @@ const Home = ({ isSmall }) => {
                     ))}
                   </div>
                 </div>
+              </div>
+              <div
+                className="mt-0 d-flex justify-content-center mb-5 pb-5 w-100 hidden"
+                id="knowMoreProcess"
+              >
+                <Link className="d-inline-block" to="process">
+                  <button
+                    className="d-flex align-items-center px-lg-5 py-3 bg-gradient-primary border-0 text-uppercase font-weight-light btn btn-dark btn-lg"
+                    style={{ fontSize: '15px' }}
+                  >
+                    Know More{' '}
+                    <Icon path={mdiArrowRight} className="ml-2" size={1} />
+                  </button>
+                </Link>
               </div>
             </div>
             <img

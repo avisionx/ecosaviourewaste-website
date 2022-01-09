@@ -30,8 +30,10 @@ const NavBar = ({ isSmall }) => {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setCollapsed(true);
+    if (!location.hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setCollapsed(true);
+    }
   }, [location]);
 
   useEffect(() => {

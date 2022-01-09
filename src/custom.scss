@@ -95,6 +95,12 @@ input[type="number"]:focus,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc107", endColorstr="#e3010f", GradientType=1);
 }
 
+.text-gradient {
+  background: linear-gradient(to right, rgba(63, 61, 86, 1) 0%, rgba(55, 120, 79, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .main_marquee_div {
   overflow: hidden;
   white-space: nowrap;
