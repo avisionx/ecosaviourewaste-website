@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import img_1 from '../img/slider/8.jpg';
-import img_2 from '../img/slider/5.jpg';
+import img_1 from '../img/services/1.jpg';
+import img_2 from '../img/services/2.jpg';
+import img_3 from '../img/services/3.jpg';
 import VisibilitySensor from 'react-visibility-sensor';
 import { animateCSS } from '../helpers';
 import { useLocation } from 'react-router-dom';
@@ -219,7 +220,8 @@ const Services = ({ isSmall }) => {
             id="imgBox"
           >
             <img src={img_1} alt="" className="img-fluid w-100" />
-            <img src={img_2} alt="" className="img-fluid w-100 mt-3" />
+            <img src={img_2} alt="" className="img-fluid w-100 mt-4" />
+            <img src={img_3} alt="" className="img-fluid w-100 mt-4" />
           </div>
         </div>
       </div>

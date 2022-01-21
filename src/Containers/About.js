@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import about_img_1 from '../img/slider/8.jpg';
-import about_img_2 from '../img/slider/5.jpg';
+import about_img_3 from '../img/slider/21.jpg';
+import about_img_2 from '../img/slider/8.jpg';
+import about_img_1 from '../img/logo.png';
 import VisibilitySensor from 'react-visibility-sensor';
 import { animateCSS } from '../helpers';
 
@@ -202,7 +203,8 @@ const About = ({ isSmall }) => {
             id="aboutImg"
           >
             <img src={about_img_1} alt="" className="img-fluid w-100" />
-            <img src={about_img_2} alt="" className="img-fluid w-100 mt-3" />
+            <img src={about_img_2} alt="" className="img-fluid w-100 mt-4" />
+            <img src={about_img_3} alt="" className="img-fluid w-100 mt-4" />
           </div>
         </div>
       </div>
