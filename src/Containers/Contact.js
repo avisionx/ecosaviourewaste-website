@@ -24,8 +24,7 @@ const Contact = ({ isSmall }) => {
       let message = state.message;
       let contact = state.contact;
       let inquiry = state.inquiry;
-      console.log(inquiry);
-      var formUrl = `https://docs.google.com/forms/d/e//formResponse?usp=pp_url&entry.1832782791=${name}&entry.862181333=${email}&entry.662822698=${contact}&entry.429037016=${message}`;
+      var formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSf4csz1Ok48mRlhD7mAD7-5DZbUYH1rRdBwaC-6lrYYeOm_UA/formResponse?usp=pp_url&entry.2005620554=${name}&entry.1045781291=${email}&entry.1166974658=${contact}&entry.662864165=${inquiry}&entry.839337160=${message}`;
       var xmlHttp = new XMLHttpRequest();
       xmlHttp.open('GET', formUrl);
       xmlHttp.send(null);
@@ -246,7 +245,7 @@ const Contact = ({ isSmall }) => {
                   </div>
 
                   <ReCAPTCHA
-                    sitekey="6LcQp-EcAAAAAFWMUKnN3l2LyOhp7SGYlHOeoymG"
+                    sitekey="6Lc_w0UeAAAAACfP7b7FqaQgAA9M7cnHHYMJFhQH"
                     className="mt-4"
                     onChange={(value) => setIsVerified(value)}
                   />
