@@ -7,7 +7,6 @@ import {
   mdiDeleteVariant,
   mdiDolly,
   mdiHammer,
-  mdiHeadLightbulbOutline,
   mdiHomeAssistant,
   mdiLaptop,
   mdiNotebookEditOutline,
@@ -65,23 +64,18 @@ const stats = [
 const services = [
   {
     icon: mdiRecycleVariant,
-    title: 'Extended Product Recycler',
-    text: 'Government of india has introduced an extended producer responsibility in the e-waste management rules, 2016.',
+    title: 'Extended Product Responsibility',
+    text: 'EPR was introduced by the Government of India in the E-waste management rules, 2016...',
   },
   {
     icon: mdiNotebookEditOutline,
     title: 'Reverse Logistics',
-    text: 'The process of moving goods from their typical final destination for the purpose of capturing value.',
+    text: 'The e-waste is moved from its typical final destination to fulfill the purpose of capturing value...',
   },
   {
     icon: mdiDatabaseLockOutline,
     title: 'Data Destruction',
-    text: 'A one-stop solution for protecting personal information as well as handling your e-recycling needs. ',
-  },
-  {
-    icon: mdiHeadLightbulbOutline,
-    title: 'Another Title',
-    text: 'Government of india has introduced an extended producer responsibility in the e-waste management rules, 2016.',
+    text: 'A one-stop destination for protecting personal information as well as handling the e-recycling needs... ',
   },
 ];
 
@@ -100,7 +94,7 @@ export const processData = [
   },
   {
     icon: mdiTruckFastOutline,
-    title: 'Secured Transport',
+    title: 'Secure Transport',
   },
   {
     icon: mdiDolly,
@@ -237,8 +231,8 @@ const Home = ({ isSmall }) => {
               style={{ maxWidth: '700px', fontSize: '1.5rem' }}
               className="mb-4 pb-2"
             >
-              Our simple process of E-Waste disposal can be your next step
-              closer to sustainable future.
+              Take a Step Ahead in Your Journey to a Clean and Sustainable
+              Future.
             </h5>
             <Link
               className="d-inline-block"
@@ -298,21 +292,23 @@ const Home = ({ isSmall }) => {
                   </div>
                 </div>
                 <p className="text-left lead" ref={aboutRef}>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC, making it over 2000 years old. Richard McClintock,
-                  a Latin professor at Hampden-Sydney College in Virginia,
-                  looked up one of the more obscure Latin words, consectetur,
-                  from a Lorem Ipsum passage, and going through the cites of the
-                  word in classical literature, discovered the undoubtable
-                  source. <br />
+                  Eco Saviour is a progressive company that is committed to
+                  manage the E-waste produced in the country in an eco-friendly
+                  and sustainable manner. It is run by three directors and a
+                  dedicated and well-trained staff. <br />
                   <br />
-                  Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
-                  Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-                  Cicero, written in 45 BC. This book is a treatise on the
-                  theory of ethics, very popular during the Renaissance. The
-                  first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                  comes from a line in section 1.10.32.
+                  We are located in Manesar, Haryana, and work throughout the
+                  country. Some of our valuable clients are Samsung, Maruti
+                  Suzuki, Bajaj, Honda, Mitsubishi, etc.
+                  <br />
+                  <br />
+                  The present tech-driven world has surely made our lives
+                  simpler and easier, but the carbon footprints they leave
+                  behind are much costlier than our imagination. From computers
+                  and mobiles to bar code scanners and printers have been
+                  continuously depreciating. The dire situation calls for a
+                  dynamic solution that helps us find a sustainable way to
+                  dispose of and recover value from the decomposing equipment.
                 </p>
                 <Link className="mt-5 d-inline-block" to="about">
                   <button
@@ -525,12 +521,17 @@ const Home = ({ isSmall }) => {
                   />
                 </div>
                 <p className="text-left lead mt-4 pr-0 pr-lg-5">
-                  On scheduling your e-waste pickup through our call centre, we
-                  will ensure a timely pick up from your site to our r2
-                  certified recycling plant to ensure a complete end to life
-                  solution of your e-waste disposal. The reverse logistics is
-                  managed by our own fleet of vehicles and channel partners from
-                  nation-wide locations.
+                  The producers find it difficult to abide by the government’s
+                  EPR regulations as the rate of e-waste generation is high and
+                  the infrastructure is lacking to collect and recycle the
+                  e-waste. 
+                  To resolve this problem and help the producers we let them
+                  network with the recyclers through us and get their e-waste
+                  recycled.
+                </p>
+                <p className="text-left lead mt-4 pr-0 pr-lg-5">
+                  We follow seven simple steps to manage and dispose of your
+                  e-waste:
                 </p>
               </div>
               <div className="mt-5 py-0 py-lg-5 hidden" id="swiperProcess">

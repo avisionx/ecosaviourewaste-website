@@ -134,26 +134,46 @@ const Process = ({ isSmall }) => {
               Our Process
             </h2>
             <p className="text-dark">
-              From computers and tablets to bar code scanners, printers,
-              monitors and servers that have been steadily depreciating in
-              value, today’s companies must find a way to dispose of and recover
-              value from decommissioning it equipment.
+              The producers find it difficult to abide by the government’s EPR
+              regulations as the rate of e-waste generation is high and the
+              infrastructure is lacking to collect and recycle the e-waste.
             </p>
             <p className="text-dark">
-              Unfortunately retiring these assets responsibly can be maze of
-              confusion. Often it takes multiple vendors to handle shipping,
-              packaging, storage, inventory, data destruction, logistics and
-              disposal/recycling – not to mention sorting through all the
-              federal, state and local regulations that govern electronic waste.
+              To resolve this problem and help the producers we let them network
+              with the recyclers through us and get their e-waste recycled. We
+              follow seven simple steps to manage and dispose of your e-waste as
+              described in below graph.
             </p>
             <p className="text-dark">
-              Our qualified staff handles all aspects of the asset retirement
+              Once you have scheduled your E-waste pickup through our call
+              center, we will commit a timely pick up from your location to our
+              R2 certified recycling plant. We ensure a complete end to life
+              solution to your e-waste disposal. Our fleet of vehicles and
+              channel partners from nationwide locations help us to manage
+              reverse logistics.
+            </p>
+            <p className="text-dark">
+              After the collection is done, the e-waste is dismantled and is
+              further segregated as either recyclable or reusable. Once the
+              segregation is done, the recyclable e-waste is destroyed and the
+              most precious material extracted from it is retained.
+            </p>
+            <p className="text-dark">
+              Whereas, reusable e-waste is repaired by fitting their destroyed
+              parts with already kept parts in a working position. This reduced
+              the cost of replacing the old parts with the new ones and hence is
+              cost-effective.
+            </p>
+            <p className="text-dark">
+              Our well-trained staff handles all aspects of the asset retirement
               process: project management, logistics, data destruction,
-              recycling, and asset remarketing. We understand that each company
-              has unique needs. So whether you have 1 office or 1000, e-waste
-              has a solution that is 100 percent customized to suit your
-              business needs.
+              recycling, and asset remarketing. We understand that every company
+              has unique needs so we try to mold our work according to your
+              requirements. No matter whatever be the size of your company, we
+              provide you with a cent-percent e-waste solution that is
+              customized to suit your business needs.
             </p>
+            <p className="text-dark">Some of our main works are:</p>
             <ListGroup flush>
               {listData.map((data) => (
                 <ListGroupItem key={data}>

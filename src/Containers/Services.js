@@ -118,27 +118,23 @@ const Services = ({ isSmall }) => {
               EPR - Extended Product Recycler
             </h2>
             <p className="text-dark">
-              Epr schemes place responsibility for the environmental impact of a
-              product on the producer. Currently, they are mainly used to ensure
-              there are responsible disposal options for products at the end of
-              their useful lives. Producers may take responsibility for doing
-              this themselves or pay another organisation to do it.Faced with
-              increasing amounts of waste, many governments have reviewed
-              available policy options and concluded that placing the
-              responsibility for the post-consumer phase of certain goods on
-              producers could be an option.
+              EPR was introduced by the Government of India in the E-waste
+              management rules, 2016. Under EPR, the producer of goods and
+              services is made responsible and is given a significant
+              responsibility of treating the waste both financially and
+              physically produced by their goods and services. Assigning EPR
+              provides incentives to prevent waste at the source, promote
+              product design for the environment and support the achievement of
+              public recycling and material management goals.
             </p>
             <p className="text-dark">
-              Extended producer responsibility (epr) is a policy approach under
-              which producers are given a significant responsibility – financial
-              and/or physical – for the treatment or disposal of post-consumer
-              products. Assigning such responsibility could in principle provide
-              incentives to prevent wastes at the source, promote product design
-              for the environment and support the achievement of public
-              recycling and materials management goals. Within the oecd the
-              trend is towards the extension of epr to new products, product
-              groups and waste streams such as electrical appliances and
-              electronics.
+              The organization of (OECD), promotes EPR trend towards new
+              products, product groups, and waste streams such as electrical
+              appliances and electronics.
+            </p>
+            <p className="text-dark">
+              We work to take this responsibility to our shoulders and treat
+              their waste in a convenient and environment-friendly manner.
             </p>
             <h2
               className="text-uppercase font-weight-light widen text-primary font-weight-bold mb-2 mt-5 head"
@@ -147,23 +143,31 @@ const Services = ({ isSmall }) => {
               Reverse Logistics
             </h2>
             <p className="text-dark">
-              We understand the complexity of transporting your end-of-life
-              technology; that’s why we offer an array of options to help ease
-              the burden. Do you need ltl (less than truckload) transportation?
-              No problem. Looking for full-service onsite packing and
-              palletizing of your electronics? We’ve got you covered. With our
-              innovative “e-crate” system, simply place your electronic
-              equipment into the e-crate container we ship to your door. We’ll
-              take it from there
+              The e-waste is moved from its typical final destination to fulfill
+              the purpose of capturing value. Understanding the complexity of
+              transporting your end-of-life technology, we offer an array of
+              options to help reduce the burden.
             </p>
             <p className="text-dark">
-              We strive to improve customer satisfaction and loyalty by paying
-              extreme attention to faulty goods and merchandise. We look after
-              the safe transportation and freight management even when the
-              faulty goods are redirected to the manufacturers. With our
-              proprietary transportation management system, we work with a prime
-              focus not only to pick up the consignment on desired time and
-              location, but also on timely returned delivery.Ï
+              We provide LTL ( less than truckload) transportation and
+              full-service on-site packing and palletizing of the electronics.
+            </p>
+            <p className="text-dark">
+              Our “e-crate” system intends to simplify your electronic equipment
+              placement into the e-crate container, which we ship to your
+              doorstep. We will take it from there and then the rest is on us.
+            </p>
+            <p className="text-dark">
+              We pay extreme attention to faulty goods and merchandise to
+              improve customer satisfaction. We also ensure safe transportation
+              and freight management even when the faulty goods are redirected
+              to the manufacturers.
+            </p>
+            <p className="text-dark">
+              With our proprietary transportation management system with pan
+              -India establishment, our prime focus is not only to pick up the
+              consignment at the desired time but also a timely returned
+              delivery.
             </p>
             <h2
               className="text-uppercase font-weight-light widen text-primary font-weight-bold mb-2 mt-5 head"
@@ -172,47 +176,28 @@ const Services = ({ isSmall }) => {
               Data Destruction
             </h2>
             <p className="text-dark">
-              Data destruction of private and confidential information is
-              crucial to corporations and small business alike .. Your data
-              represents your greatest asset. When recycling it hardware
-              equipment, there is a significant risk that data may fall into the
-              wrong hands. Our r2, iso 14001 and iso 45001 certification ensures
-              that our process and mission is to dispose your obsolete it
-              equipment safely and securely.
+              A one-stop destination for protecting personal information as well
+              as handling the e-recycling needs.
             </p>
             <p className="text-dark">
-              Our employees are fully trained and go through regular background
-              checks to make certain they can handle security procedures for the
-              classified data and information destruction. We provide both
-              on-site and off-site hard drive shredding services.
-            </p>
-            <h2
-              className="text-uppercase font-weight-light widen text-primary font-weight-bold mb-2 mt-5 head"
-              id="4"
-            >
-              One more as Discussed
-            </h2>
-            <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              Data has become one of the greatest assets for corporations. Data
+              destruction of private and confidential information is very
+              crucial to the business sector.
             </p>
             <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              While recycling the hardware, there is a major risk of
+              confidential data falling into wrong hands.
+            </p>
+            <p className="text-dark">
+              Our R2 has 14001 and 45001 certification, this ensures our process
+              and mission to dispose of your obsolete equipment safely and
+              securely.
+            </p>
+            <p className="text-dark">
+              We have fully trained employees who go through a regular
+              background check to ensure that they handle security procedures
+              for classified data and information destruction. We have both
+              on-site as well as off-site hard drive shredding services.
             </p>
           </div>
           <div

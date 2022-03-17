@@ -4,6 +4,9 @@ import about_img_2 from '../img/slider/8.jpg';
 import about_img_1 from '../img/logo.png';
 import VisibilitySensor from 'react-visibility-sensor';
 import { animateCSS } from '../helpers';
+import { ListGroup, ListGroupItem } from 'reactstrap';
+import Icon from '@mdi/react';
+import { mdiHandPointingRight } from '@mdi/js';
 
 const About = ({ isSmall }) => {
   const [aboutTitleVis, setAboutTitleVis] = useState(false);
@@ -101,101 +104,139 @@ const About = ({ isSmall }) => {
               Eco Saviour E-Waste
             </h2>
             <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              Eco Saviour is a progressive company that is committed to manage
+              the E-waste produced in the country in an eco-friendly and
+              sustainable manner. It is run by three directors and a dedicated
+              and well-trained staff.
             </p>
             <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              We are located in Manesar, Haryana, and work throughout the
+              country. Some of our valuable clients are Samsung, Maruti Suzuki,
+              Bajaj, Honda, Mitsubishi, etc.
             </p>
+            <p className="text-dark">
+              The present tech-driven world has surely made our lives simpler
+              and easier, but the carbon footprints they leave behind are much
+              costlier than our imagination. From computers and mobiles to bar
+              code scanners and printers have been continuously depreciating.
+              The dire situation calls for a dynamic solution that helps us find
+              a sustainable way to dispose of and recover value from the
+              decomposing equipment.
+            </p>
+            <p className="text-dark">
+              With the thought of simplifying your e-waste disposal and
+              promoting sustainable growth in the country, we have laid the
+              foundation of Eco Saviour.
+            </p>
+
             <h2 className="text-uppercase font-weight-light widen text-primary font-weight-bold mb-2 mt-5 head">
-              Founder Of Eco Saviour E-Waste
+              Know Our Team
             </h2>
             <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              <b className="lead font-weight-bold">Mr. Siddharth Jain </b>
+              <br />
+              An enthusiast of e-waste recycling since his childhood, Siddharth
+              is the brain and force behind the company. In his school days, he
+              became a student activist and was elected as the youngest Chief
+              Executive Councilor of Delhi University in his college days. At an
+              early age of 19, he started his journey in the business of
+              Aluminium recycling. Later, his interest shifted from aluminum
+              recycling to electronics recycling.
             </p>
             <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              <b className="lead font-weight-bold">Mr. Anurag Maheshwari </b>
+              <br />
+              He has vast experience of more than 23 years in the finance
+              department. He gained this experience while working for multiple
+              MNCs throughout his lifetime. Being one amongst the Board of
+              Directors, he is the one behind major financial management and
+              plans in the company.
+            </p>
+            <p className="text-dark">
+              <b className="lead font-weight-bold">Mr. Kapil Jain </b>
+              <br />
+              The metal specialist of the company, has earned vast experience in
+              dealing with ferrous and non-ferrous metals during his 20 years of
+              work experience. His deep knowledge of metals has helped the
+              company and its staff learn and implement the most efficient and
+              cost-effective methods of recycling waste.
             </p>
             <h2 className="text-uppercase font-weight-light widen text-primary font-weight-bold mb-2 mt-5 head">
               Our Mission
             </h2>
             <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
-            </p>
-            <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              <ListGroup flush>
+                <ListGroupItem className="px-0 py-1 border-0">
+                  <Icon
+                    path={mdiHandPointingRight}
+                    className="mr-2"
+                    color="#37784f"
+                    size={1}
+                  />
+                  To recycle end-to-end E-waste and promote sustainable growth
+                  in the country.
+                </ListGroupItem>
+                <ListGroupItem className="px-0 py-1 border-0">
+                  <Icon
+                    path={mdiHandPointingRight}
+                    className="mr-2"
+                    color="#37784f"
+                    size={1}
+                  />
+                  To improve the country’s global image by adhering to the
+                  National Action Plan On Climate Change and the UN’s SDGs.
+                </ListGroupItem>
+              </ListGroup>
             </p>
             <h2 className="text-uppercase font-weight-light widen text-primary font-weight-bold mb-2 mt-5 head">
               Our Vision
             </h2>
             <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
-            </p>
-            <p className="text-dark">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum
-              dolor sit amet, consectetur
+              <ListGroup flush>
+                <ListGroupItem className="px-0 py-1 border-0">
+                  <Icon
+                    path={mdiHandPointingRight}
+                    className="mr-2"
+                    color="#37784f"
+                    size={1}
+                  />
+                  We look forward to preventing harm caused to nature by
+                  unsustainable e-waste disposal and fulfilling the commitment
+                  towards the SDGs.
+                </ListGroupItem>
+                <ListGroupItem className="px-0 py-1 border-0">
+                  <Icon
+                    path={mdiHandPointingRight}
+                    className="mr-2"
+                    color="#37784f"
+                    size={1}
+                  />
+                  The company aspires to promote the efficient collection,
+                  transportation, reuse, and recycling of e-waste.
+                </ListGroupItem>
+                <ListGroupItem className="px-0 py-1 border-0">
+                  <Icon
+                    path={mdiHandPointingRight}
+                    className="mr-2"
+                    color="#37784f"
+                    size={1}
+                  />
+                  We strive to lead the way for informal sectors to find
+                  sustainable solutions and become a part of a transparent and
+                  open economy.
+                </ListGroupItem>
+                <ListGroupItem className="px-0 py-1 border-0">
+                  <Icon
+                    path={mdiHandPointingRight}
+                    className="mr-2"
+                    color="#37784f"
+                    size={1}
+                  />
+                  The company believes in promoting community awareness towards
+                  sustainable waste management and helping them bring behavioral
+                  changes.
+                </ListGroupItem>
+              </ListGroup>
             </p>
           </div>
           <div
